@@ -1,16 +1,73 @@
-# Flight Safety Video Taxonomy
+# ✈️ Flight Safety Video Taxonomy — Schema v2.0
 
-A normalized relational database schema for cataloging and managing airline flight safety video metadata — designed for inflight entertainment (IFE) operations.
+**A FIAF-aligned relational database for cataloging, classifying, and 
+managing airline flight safety video metadata across international 
+carriers, OEM systems, and regulatory standards.**
 
-Built to apply metadata schema design, controlled vocabulary, audiovisual cataloguing standards, and content rights tracking to the highest-priority content type in the IFE media cycle.
+By Kelsey Kiantoro
+---
+
+## TL;DR
+
+Airlines produce safety videos in multiple languages, for multiple 
+aircraft types, delivered through multiple OEM entertainment systems 
+(Panasonic, Thales, Collins, Safran), But there is no standardized 
+metadata schema for cataloging them across carriers, formats, and 
+regulatory jurisdictions.
+
+Using the FIAF Moving Image Cataloguing Manual's Work–Variant–
+Manifestation–Item (WVMI) hierarchy as the conceptual framework, 
+this schema normalizes flight safety video metadata into an 8-table 
+relational database (ERD, 3NF) with ENUM-enforced data quality rules 
+— enabling structured cataloging, QC tracking, and cross-carrier 
+content discovery.
+
+The same taxonomy and controlled vocabulary design methodology was 
+applied in my FAIR Gaming Data project, where I built a SKOS-aligned 
+taxonomy bridging controlled vocabulary and folksonomy across 445 
+community-curated tags into 9 ENUM-enforced dimensions [3].
 
 ---
 
-## Why This Exists
+## About Me
 
-Airline safety videos are the highest-stakes content in an IFE system. They are regulatory-mandated, OEM-specific, multilingual, and version-sensitive. A single metadata error — wrong locale, wrong OEM format, wrong aircraft type — can cause content to fail to load or display incorrectly on the aircraft. Wrong metadata on a safety video is not a search problem. It is a compliance problem.
+**Metadata Specialist | Content Data Operations | Taxonomy Designer**
 
-This schema addresses that: a queryable, governed structure that captures every dimension a metadata specialist needs to manage safety video content across carriers, OEM systems, language variants, and regulatory environments.
+I'm a metadata operations professional with 8+ years of experience managing content  metadata, QC checklists, process documentation, and on-time delivery across CMS and DAM platforms for clients, including Fortune 500 brands across 5 markets.
+
+My technical foundation includes:
+- **Relational database design** — ERD modeling, 3NF normalization, 
+  foreign key constraints, ENUM-enforced data quality rules
+- **Taxonomy & controlled vocabulary** — SKOS alignment, folksonomy 
+  governance, dimensional classification [3]
+- **Content metadata operations** — QC checklists, error logs, root 
+  cause analysis, naming conventions, process documentation
+- **Audiovisual content management** — video content libraries, 
+  rights tracking, multi-platform delivery cycles
+
+Recently completed her MS in Information Science at Pratt Institute 
+(GPA 4.0, May 2026) with coursework in metadata standards, taxonomy 
+design, data management, and knowledge organization.
+
+---
+
+## Why This Project
+
+Flight safety videos are high-priority airline content — regulated by 
+aviation authorities (FAA, EASA, CAAC, DGCA), produced in multiple 
+languages, adapted for different aircraft types and cabin classes, and 
+delivered through proprietary OEM entertainment systems with different 
+technical specifications.
+
+Yet there is no standardized way to catalog them. Each airline, each 
+OEM, each production company uses different naming conventions, 
+different metadata fields, different version tracking methods.
+
+This project applies the same structural approach I used in my FAIR 
+Gaming Data project — where I transformed 445 uncontrolled community 
+tags into a normalized relational schema with SKOS-aligned taxonomy 
+and ENUM-enforced data quality rules [3] — to the domain of airline 
+safety video content.
 
 ---
 
