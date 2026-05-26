@@ -1,3 +1,4 @@
+```mermaid
 ---
 title: "Flight Safety Video Taxonomy — Schema v2.0"
 ---
@@ -96,3 +97,4 @@ erDiagram
     VIDEO_VARIANT ||--o{ VIDEO_MANIFESTATION : "delivered as"
     VIDEO_MANIFESTATION ||--|| TECHNICAL_METADATA : "specified by"
     VIDEO_MANIFESTATION ||--o{ AIRCRAFT_COMPATIBILITY : "compatible with"
+```
