@@ -211,5 +211,5 @@ Three fields were added beyond a standard DAM schema to reflect IFE operational 
 ## Author
 
 Kelsey Kiantoro
+Taxonomist, Metadata Consultant, Information Professials
 MS Information Science, Pratt Institute 2026
-kelseykiano.framer.website | github.com/kianoding
