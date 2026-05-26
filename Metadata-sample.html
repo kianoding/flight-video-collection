@@ -1,0 +1,193 @@
+<!-- ============================================================
+     CARRIER Entity
+     ============================================================ -->
+<div class="carrier" data-carrier-id="1">
+  <meta name="carrier.carrier_name" content="All Nippon Airways" />
+  <meta name="carrier.iata_code" content="NH" />
+  <meta name="carrier.icao_code" content="ANA" />
+  <meta name="carrier.alliance" content="Star Alliance" />
+  <meta name="carrier.region" content="Asia-Pacific" />
+</div>
+
+<!-- ============================================================
+     SAFETY_VIDEO_WORK Entity [FIAF: Work Level]
+     Conceptual work — one entry regardless of language or format.
+     ANA collaborated with The Pokémon Company to create the 
+     world's first Pokémon in-flight safety video [1].
+     ============================================================ -->
+<div class="safety-video-work" data-work-id="1">
+  <meta name="work.carrier_id" content="1" />
+  <meta name="work.preferred_title" 
+        content="ANA x Pokémon In-Flight Safety Video" />
+  <meta name="work.year_produced" content="2024" />
+  <meta name="work.production_style" content="Hybrid" />
+  <meta name="work.regulatory_standard" content="DGCA" />
+  <meta name="work.content_status" content="Active" />
+  <meta name="work.isan" content="" />
+  <meta name="work.notes" 
+        content="World's first Pokémon-themed in-flight safety video. 
+        Launched August 15, 2024 on Pikachu Jet NH and Eevee Jet NH. 
+        Expanded to all ANA domestic and international flights 
+        December 1, 2024. Expected use until end of August 2028. 
+        3D Pokémon characters overlaid on actual aircraft footage. 
+        Includes cutaway bubble featuring Japanese Sign Language 
+        and International Sign instructions adopted in cooperation 
+        with the Japanese Federation of the Deaf [1]." />
+</div>
+
+<!-- ============================================================
+     PRODUCTION_AGENT Entity [FIAF: Agent at Work Level]
+     Production company and key collaborators [1].
+     ============================================================ -->
+<div class="production-agent" data-agent-id="1">
+  <meta name="agent.work_id" content="1" />
+  <meta name="agent.agent_name" content="All Nippon Airways Co., Ltd." />
+  <meta name="agent.agent_type" content="Production Company" />
+</div>
+
+<div class="production-agent" data-agent-id="2">
+  <meta name="agent.work_id" content="1" />
+  <meta name="agent.agent_name" content="The Pokémon Company" />
+  <meta name="agent.agent_type" content="Production Company" />
+</div>
+
+<div class="production-agent" data-agent-id="3">
+  <meta name="agent.work_id" content="1" />
+  <meta name="agent.agent_name" 
+        content="Motoaki Ueno, Executive Vice President, 
+        Customer Experience Management and Planning, ANA" />
+  <meta name="agent.agent_type" content="Broadcaster" />
+</div>
+
+<!-- ============================================================
+     VIDEO_VARIANT Entity [FIAF: Variant Level]
+     Language/audience versions. ANA's video features 
+     Japanese-English narration with subtitles in 18 languages [1].
+     ============================================================ -->
+
+<!-- Variant 1: Japanese-English primary narration (domestic) -->
+<div class="video-variant" data-variant-id="1">
+  <meta name="variant.work_id" content="1" />
+  <meta name="variant.variant_title" 
+        content="ANA x Pokémon Safety Video — Domestic" />
+  <meta name="variant.spoken_language" content="Japanese" />
+  <meta name="variant.subtitle_language" content="Japanese; English" />
+  <meta name="variant.dubbed" content="false" />
+  <meta name="variant.duration_seconds" content="270" />
+  <meta name="variant.region_specific" content="true" />
+  <meta name="variant.audience_note" 
+        content="Domestic flights. Subtitles in Japanese and English. 
+        Includes Japanese Sign Language cutaway [1]." />
+</div>
+
+<!-- Variant 2: Japanese-English narration (international) -->
+<div class="video-variant" data-variant-id="2">
+  <meta name="variant.work_id" content="1" />
+  <meta name="variant.variant_title" 
+        content="ANA x Pokémon Safety Video — International" />
+  <meta name="variant.spoken_language" content="Japanese; English" />
+  <meta name="variant.subtitle_language" 
+        content="Multilingual — 18 languages including language 
+        of country of service [1]" />
+  <meta name="variant.dubbed" content="false" />
+  <meta name="variant.duration_seconds" content="285" />
+  <meta name="variant.region_specific" content="true" />
+  <meta name="variant.audience_note" 
+        content="International flights. Subtitles in Japanese plus 
+        language of destination country. Includes International Sign 
+        cutaway adopted with Japanese Federation of the Deaf [1]." />
+</div>
+
+<!-- ============================================================
+     VIDEO_MANIFESTATION Entity [FIAF: Manifestation Level]
+     Technical deliverable per OEM system.
+     First flight: ANA flight 186 to Honolulu, August 15, 2024 [1].
+     Star Wars livery aircraft excluded — continue showing 
+     original safety videos [1].
+     ============================================================ -->
+
+<!-- Manifestation 1: Pikachu Jet NH (Boeing 787) -->
+<div class="video-manifestation" data-manifestation-id="1">
+  <meta name="manifestation.variant_id" content="2" />
+  <meta name="manifestation.oem_system" content="Panasonic" />
+  <meta name="manifestation.version_label" content="PKM-NH-2024-08-v1.0" />
+  <meta name="manifestation.cycle_lock_date" content="2024-08-01" />
+  <meta name="manifestation.qc_status" content="Signed-Off" />
+  <meta name="manifestation.delivery_date" content="2024-08-15" />
+</div>
+
+<!-- Manifestation 2: Eevee Jet NH (Boeing 777) -->
+<div class="video-manifestation" data-manifestation-id="2">
+  <meta name="manifestation.variant_id" content="2" />
+  <meta name="manifestation.oem_system" content="Panasonic" />
+  <meta name="manifestation.version_label" content="PKM-NH-2024-08-v1.0-777" />
+  <meta name="manifestation.cycle_lock_date" content="2024-08-01" />
+  <meta name="manifestation.qc_status" content="Signed-Off" />
+  <meta name="manifestation.delivery_date" content="2024-08-15" />
+</div>
+
+<!-- Manifestation 3: Fleet-wide rollout (December 2024) -->
+<div class="video-manifestation" data-manifestation-id="3">
+  <meta name="manifestation.variant_id" content="1" />
+  <meta name="manifestation.oem_system" content="Panasonic" />
+  <meta name="manifestation.version_label" content="PKM-NH-2024-12-FLEET" />
+  <meta name="manifestation.cycle_lock_date" content="2024-11-15" />
+  <meta name="manifestation.qc_status" content="Signed-Off" />
+  <meta name="manifestation.delivery_date" content="2024-12-01" />
+</div>
+
+<!-- ============================================================
+     TECHNICAL_METADATA Entity [FIAF: Manifestation-level specs]
+     ============================================================ -->
+<div class="technical-metadata" data-tech-id="1">
+  <meta name="tech.manifestation_id" content="1" />
+  <meta name="tech.file_format" content="MP4" />
+  <meta name="tech.video_codec" content="H.264" />
+  <meta name="tech.resolution" content="HD 1080p" />
+  <meta name="tech.aspect_ratio" content="16:9" />
+  <meta name="tech.color_space" content="Rec.709" />
+  <meta name="tech.audio_format" content="AAC" />
+  <meta name="tech.audio_channels" content="Stereo" />
+  <meta name="tech.file_size_mb" content="185.00" />
+  <meta name="tech.frame_rate" content="29.970" />
+</div>
+
+<!-- ============================================================
+     AIRCRAFT_COMPATIBILITY Entity
+     Pikachu Jet = Boeing 787, Eevee Jet = Boeing 777 [1].
+     Fleet-wide rollout excludes Star Wars livery aircraft [1].
+     ============================================================ -->
+<div class="aircraft-compatibility" data-compat-id="1">
+  <meta name="compat.manifestation_id" content="1" />
+  <meta name="compat.aircraft_type" content="Boeing 787-9" />
+  <meta name="compat.cabin_class" content="Universal" />
+</div>
+
+<div class="aircraft-compatibility" data-compat-id="2">
+  <meta name="compat.manifestation_id" content="2" />
+  <meta name="compat.aircraft_type" content="Boeing 777-200ER" />
+  <meta name="compat.cabin_class" content="Universal" />
+</div>
+
+<div class="aircraft-compatibility" data-compat-id="3">
+  <meta name="compat.manifestation_id" content="3" />
+  <meta name="compat.aircraft_type" content="All ANA fleet" />
+  <meta name="compat.cabin_class" content="Universal" />
+</div>
+
+<!-- ============================================================
+     CONTENT_RIGHTS Entity
+     Pokémon Air Adventures collaboration since March 2023 [1].
+     ============================================================ -->
+<div class="content-rights" data-rights-id="1">
+  <meta name="rights.work_id" content="1" />
+  <meta name="rights.rights_holder" content="The Pokémon Company" />
+  <meta name="rights.distribution_scope" content="Global" />
+  <meta name="rights.expiry_date" content="2028-08-31" />
+  <meta name="rights.license_type" content="Exclusive" />
+  <meta name="rights.notes" 
+        content="Pokémon Air Adventures partnership since March 2023. 
+        Pokémon character likeness rights. Video expected to be used 
+        until end of August 2028 [1]. Excludes Star Wars livery 
+        aircraft which retain original safety videos [1]." />
+</div>
