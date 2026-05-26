@@ -1,19 +1,4 @@
-
-                        <!DOCTYPE html>
-                        <html lang="en">
-                        <head>
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-							<style>
-								body {
-									background-color: white; /* Ensure the iframe has a white background */
-								}
-
-								
-							</style>
-                        </head>
-                        <body>
-                            <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -27,18 +12,20 @@
       color: #000000;
       line-height: 1.5;
     }
-
-    /* LINKS */
     a { color: #000; text-decoration: underline; }
     a:hover { color: #555; }
 
     /* ICONS */
     .icon {
-      width: 0.85em;
-      height: 0.85em;
+      width: 0.75em;
+      height: 0.75em;
       vertical-align: -0.1em;
       fill: currentColor;
-      margin-right: 0.35rem;
+      margin-right: 0.25rem;
+    }
+    .metadata-sidebar .icon {
+      width: 0.6em;
+      height: 0.6em;
     }
 
     /* HEADER */
@@ -113,9 +100,7 @@
       color: #333;
       margin-top: 0.5rem;
     }
-    .blog-section {
-      margin-bottom: 1.25rem;
-    }
+    .blog-section { margin-bottom: 1.25rem; }
     .blog-section-title {
       font-size: 0.7rem;
       font-weight: 700;
@@ -139,9 +124,6 @@
       aspect-ratio: 16/9;
       background: #f0f0f0;
       border: 2px solid #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       overflow: hidden;
     }
     .video-frame a {
@@ -166,65 +148,63 @@
       text-align: center;
     }
 
-    /* RIGHT: Scrollable Metadata */
+    /* RIGHT: Scrollable Metadata — Compact */
     .metadata-sidebar {
       grid-column: 3;
-      padding: 0.75rem;
+      padding: 0.5rem;
       overflow-y: auto;
     }
 
-    /* ENTITY CARDS */
-    .entity {
-      margin-bottom: 0.75rem;
-    }
+    /* ENTITY CARDS — Compact */
+    .entity { margin-bottom: 0.6rem; }
     .entity-title {
-      font-size: 0.65rem;
+      font-size: 0.55rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      border-bottom: 2px solid #000;
-      padding-bottom: 0.2rem;
-      margin-bottom: 0.35rem;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 0.15rem;
+      margin-bottom: 0.25rem;
       display: flex;
       align-items: center;
-      gap: 0.3rem;
+      gap: 0.25rem;
     }
     .fiaf-badge {
-      font-size: 0.55rem;
+      font-size: 0.45rem;
       font-weight: 700;
       border: 1px solid #000;
-      padding: 0px 4px;
+      padding: 0px 3px;
       letter-spacing: 0.03em;
       margin-left: auto;
       white-space: nowrap;
     }
     .field {
       display: flex;
-      padding: 0.15rem 0;
+      padding: 0.1rem 0;
       border-bottom: 1px solid #eee;
-      font-size: 0.7rem;
+      font-size: 0.6rem;
     }
     .field-name {
       font-weight: 700;
-      min-width: 90px;
+      min-width: 70px;
       flex-shrink: 0;
-      font-size: 0.65rem;
+      font-size: 0.55rem;
     }
     .field-value {
-      font-size: 0.7rem;
+      font-size: 0.6rem;
       color: #333;
     }
     .enum-tag {
       border: 1px solid #000;
-      padding: 0px 4px;
-      font-size: 0.6rem;
+      padding: 0px 3px;
+      font-size: 0.5rem;
       font-weight: 700;
       letter-spacing: 0.02em;
     }
     .sub-entry {
-      margin-top: 0.35rem;
+      margin-top: 0.25rem;
       border-top: 1px solid #ccc;
-      padding-top: 0.35rem;
+      padding-top: 0.25rem;
     }
 
     /* FOOTER */
@@ -243,20 +223,9 @@
         grid-template-rows: auto auto auto;
         height: auto;
       }
-      .blog-area {
-        grid-column: 1;
-        border-right: none;
-        border-bottom: 2px solid #000;
-      }
-      .video-area {
-        grid-column: 1;
-        border-right: none;
-        border-bottom: 2px solid #000;
-      }
-      .metadata-sidebar {
-        grid-column: 1;
-        max-height: 50vh;
-      }
+      .blog-area { border-right: none; border-bottom: 2px solid #000; }
+      .video-area { border-right: none; border-bottom: 2px solid #000; }
+      .metadata-sidebar { max-height: 50vh; }
     }
   </style>
 </head>
@@ -264,10 +233,7 @@
 
 <!-- HEADER -->
 <div class="header">
-  <h1>
-    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M480 192H365.71L260.61 8.06A16.014 16.014 0 0 0 246.71 0h-65.5c-10.63 0-18.3 10.17-15.38 20.39L214.86 192H112l-43.2-57.6c-3.02-4.03-7.77-6.4-12.8-6.4H16C5.6 128-2.21 137.75.49 147.88L32 256 .49 364.12C-2.21 374.25 5.6 384 16 384h40c5.03 0 9.78-2.37 12.8-6.4L112 320h102.86l-49.03 171.6c-2.92 10.22 4.75 20.4 15.38 20.4h65.5c5.74 0 11.04-3.08 13.89-8.06L365.71 320H480c35.35 0 96-28.65 96-64s-60.65-64-96-64z"/></svg>
-    Flight Safety Video Taxonomy
-  </h1>
+  <h1>✈ Flight Safety Video Taxonomy</h1>
   <p>Schema v2.0 | FIAF WVMI Hierarchy | Kelsey Kiantoro |
      Information &amp; Metadata Technologist</p>
 </div>
@@ -288,18 +254,12 @@
 <div id="tab-pokemon" class="tab-content active">
   <div class="main-layout">
 
-    <!-- LEFT 1.5fr: About / Blog -->
+    <!-- LEFT: Blog -->
     <div class="blog-area">
-      <h3>
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></svg>
-        About This Video
-      </h3>
+      <h3>About This Video</h3>
 
       <div class="blog-section">
-        <div class="blog-section-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"/></svg>
-          Overview
-        </div>
+        <div class="blog-section-title">Overview</div>
         <p>World's first Pokémon-themed in-flight safety video.
            Launched August 15, 2024 on Pikachu Jet NH (Boeing 787-9)
            and Eevee Jet NH (Boeing 777-200ER). Expanded to all ANA
@@ -307,10 +267,7 @@
       </div>
 
       <div class="blog-section">
-        <div class="blog-section-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M278.5 215.6L23 471c-9.4 9.4-9.4 24.6 0 33.9 9.4 9.4 24.6 9.4 33.9 0l248.1-248.1c41.4 38.2 95.1 61.2 154 61.2 8.8 0 17.5-.6 26-1.8-4.6-14.8-7-30.5-7-46.8 0-88.4 71.6-160 160-160 16.3 0 32 2.4 46.8 7 1.2-8.5 1.8-17.2 1.8-26 0-132.5-107.5-240-240-240-82.5 0-155.4 41.6-198.5 105z"/></svg>
-          Production
-        </div>
+        <div class="blog-section-title">Production</div>
         <p>3D Pokémon characters overlaid on actual aircraft footage
            shot using a real aircraft with ANA cabin attendants and
            staff involved in the production. Produced in collaboration
@@ -319,10 +276,7 @@
       </div>
 
       <div class="blog-section">
-        <div class="blog-section-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>
-          Accessibility
-        </div>
+        <div class="blog-section-title">Accessibility</div>
         <p>Features cutaway bubble with Japanese Sign Language and
            International Sign instructions, adopted in cooperation
            with the Japanese Federation of the Deaf. Subtitles
@@ -331,10 +285,7 @@
       </div>
 
       <div class="blog-section">
-        <div class="blog-section-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
-          Distribution
-        </div>
+        <div class="blog-section-title">Distribution</div>
         <p>Expected use until end of August 2028. Star Wars livery
            aircraft excluded — continue showing original safety
            videos. YouTube release surpassed 1 million combined
@@ -342,40 +293,23 @@
       </div>
 
       <div class="blog-section">
-        <div class="blog-section-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg>
-          Source
-        </div>
+        <div class="blog-section-title">Source</div>
         <p><a href="https://www.anahd.co.jp/group/en/pr/202408/20240815.html"
               target="_blank" rel="noopener noreferrer">
           ANA Holdings press release (August 15, 2024)</a>.
           ANA Pokémon Air Adventures page. The Pokémon Company
           corporate topics.</p>
       </div>
-
-      <div class="blog-section">
-        <div class="blog-section-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M12.41 148.02l232.94 105.67c6.8 3.09 14.49 3.09 21.29 0l232.94-105.67c16.55-7.51 16.55-32.52 0-40.03L266.65 2.31a25.607 25.607 0 0 0-21.29 0L12.41 107.98c-16.55 7.51-16.55 32.53 0 40.04zm487.18 88.28l-58.09-26.33-161.64 73.27c-7.56 3.43-15.59 5.17-23.86 5.17s-16.29-1.74-23.86-5.17L70.51 209.97l-58.1 26.33c-16.55 7.5-16.55 32.52 0 40.03l232.94 105.59c6.8 3.08 14.49 3.08 21.29 0L499.59 276.3c16.55-7.51 16.55-32.53 0-40z"/></svg>
-          Methodology
-        </div>
-        <p>Schema design follows the same ENUM-enforced controlled
-           vocabulary approach applied in the
-           <a href="https://github.com/kianoding/data-management-sp-26"
-              target="_blank" rel="noopener noreferrer">
-           FAIR Gaming Data project</a>, where SKOS properties
-           (skos:broader, skos:inScheme) bridge taxonomy and
-           folksonomy within a single relational structure.</p>
-      </div>
     </div>
 
-    <!-- CENTER 2.5fr: Video Preview -->
+    <!-- CENTER: Video -->
     <div class="video-area">
       <div class="video-frame">
         <a href="https://www.anahd.co.jp/group/en/pr/202408/20240815.html"
            target="_blank" rel="noopener noreferrer"
            title="Source: ANA Holdings Press Release (August 15, 2024)">
           <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdyzu3alUzhQULYnczgvVbOhuiXQguGTPyo6pWrIpEyXWu4qrGX6wvfjLlmF-e77meGtG1Itnf9bPFP7NNxqNdUx7J_yLI5otJZ1k9w72k7-TQNaJ4elS9bAlELndPjCZA935a3SOpbqMgEqoxEKoUjodWh?key=7gi2HFhKa1mBNr16YKyosg"
-               alt="ANA × Pokémon In-Flight Safety Video — 3D Pikachu overlaid on aircraft cabin footage. Source: ANA Holdings Press Release, August 15, 2024">
+               alt="ANA Pokémon In-Flight Safety Video — 3D Pikachu overlaid on aircraft cabin footage">
         </a>
       </div>
       <div class="video-caption">
@@ -389,21 +323,17 @@
       </div>
     </div>
 
-    <!-- RIGHT 1fr: Scrollable Metadata -->
+    <!-- RIGHT: Metadata -->
     <div class="metadata-sidebar">
 
-      <!-- CARRIER -->
       <div class="entity">
-        <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M436 480h-20V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v456H12c-6.627 0-12 5.373-12 12v20h448v-20c0-6.627-5.373-12-12-12zM128 76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76zm0 96c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40zm-12 168c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v84h-64v-84zm128-168c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40zm0-96c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76zm12 264c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40z"/></svg>
-          CARRIER
-        </div>
+        <div class="entity-title">▪ CARRIER</div>
         <div class="field">
           <span class="field-name">carrier</span>
           <span class="field-value">All Nippon Airways</span>
         </div>
         <div class="field">
-          <span class="field-name">iata / icao</span>
+          <span class="field-name">iata/icao</span>
           <span class="field-value">NH / ANA</span>
         </div>
         <div class="field">
@@ -416,11 +346,9 @@
         </div>
       </div>
 
-      <!-- WORK -->
       <div class="entity">
         <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M488 64h-8v20c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12V64H96v20c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12V64h-8C10.7 64 0 74.7 0 88v336c0 13.3 10.7 24 24 24h8v-20c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v20h320v-20c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v20h8c13.3 0 24-10.7 24-24V88c0-13.3-10.7-24-24-24z"/></svg>
-          WORK
+          ▪ WORK
           <span class="fiaf-badge">FIAF: Work</span>
         </div>
         <div class="field">
@@ -445,11 +373,9 @@
         </div>
       </div>
 
-      <!-- AGENTS -->
       <div class="entity">
         <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2z"/></svg>
-          AGENTS
+          ▪ AGENTS
           <span class="fiaf-badge">FIAF: Agent</span>
         </div>
         <div class="field">
@@ -462,11 +388,9 @@
         </div>
       </div>
 
-      <!-- VARIANT -->
       <div class="entity">
         <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm200 248c0 22.5-3.9 44.2-10.8 64.4h-44.1c3-21.1 4.9-42.9 4.9-64.4 0-21.5-1.9-43.3-4.9-64.4h44.1c6.9 20.2 10.8 41.9 10.8 64.4z"/></svg>
-          VARIANTS
+          ▪ VARIANTS
           <span class="fiaf-badge">FIAF: Variant</span>
         </div>
         <div class="field">
@@ -483,11 +407,9 @@
         </div>
       </div>
 
-      <!-- MANIFESTATIONS -->
       <div class="entity">
         <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32z"/></svg>
-          MANIFESTATIONS
+          ▪ MANIFESTATIONS
           <span class="fiaf-badge">FIAF: Manif.</span>
         </div>
         <div class="field">
@@ -518,20 +440,18 @@
         </div>
       </div>
 
-      <!-- TECHNICAL -->
       <div class="entity">
         <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"/></svg>
-          TECHNICAL
+          ▪ TECHNICAL
           <span class="fiaf-badge">FIAF: Manif.</span>
         </div>
         <div class="field">
           <span class="field-name">format</span>
           <span class="enum-tag">MP4</span>
-          <span class="enum-tag" style="margin-left:4px">H.264</span>
+          <span class="enum-tag" style="margin-left:3px">H.264</span>
         </div>
         <div class="field">
-          <span class="field-name">resolution</span>
+          <span class="field-name">res</span>
           <span class="enum-tag">HD 1080p</span>
         </div>
         <div class="field">
@@ -541,7 +461,7 @@
         <div class="field">
           <span class="field-name">audio</span>
           <span class="enum-tag">AAC</span>
-          <span class="enum-tag" style="margin-left:4px">Stereo</span>
+          <span class="enum-tag" style="margin-left:3px">Stereo</span>
         </div>
         <div class="field">
           <span class="field-name">size</span>
@@ -553,12 +473,8 @@
         </div>
       </div>
 
-      <!-- AIRCRAFT -->
       <div class="entity">
-        <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M480 192H365.71L260.61 8.06A16.014 16.014 0 0 0 246.71 0h-65.5c-10.63 0-18.3 10.17-15.38 20.39L214.86 192H112l-43.2-57.6c-3.02-4.03-7.77-6.4-12.8-6.4H16C5.6 128-2.21 137.75.49 147.88L32 256 .49 364.12C-2.21 374.25 5.6 384 16 384h40c5.03 0 9.78-2.37 12.8-6.4L112 320h102.86l-49.03 171.6c-2.92 10.22 4.75 20.4 15.38 20.4h65.5c5.74 0 11.04-3.08 13.89-8.06L365.71 320H480c35.35 0 96-28.65 96-64s-60.65-64-96-64z"/></svg>
-          AIRCRAFT
-        </div>
+        <div class="entity-title">▪ AIRCRAFT</div>
         <div class="field">
           <span class="field-name">type</span>
           <span class="field-value">B787-9 (Pikachu)</span>
@@ -569,7 +485,7 @@
         </div>
         <div class="field">
           <span class="field-name">type</span>
-          <span class="field-value">All fleet (excl. Star Wars)</span>
+          <span class="field-value">All fleet (excl. SW)</span>
         </div>
         <div class="field">
           <span class="field-name">cabin</span>
@@ -577,12 +493,8 @@
         </div>
       </div>
 
-      <!-- RIGHTS -->
       <div class="entity">
-        <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3z"/></svg>
-          RIGHTS
-        </div>
+        <div class="entity-title">▪ RIGHTS</div>
         <div class="field">
           <span class="field-name">holder</span>
           <span class="field-value">The Pokémon Company</span>
@@ -611,18 +523,12 @@
 <div id="tab-delft" class="tab-content">
   <div class="main-layout">
 
-    <!-- LEFT 1.5fr: About / Blog -->
+    <!-- LEFT: Blog -->
     <div class="blog-area">
-      <h3>
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></svg>
-        About This Video
-      </h3>
+      <h3>About This Video</h3>
 
       <div class="blog-section">
-        <div class="blog-section-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"/></svg>
-          Overview
-        </div>
+        <div class="blog-section-title">Overview</div>
         <p>Innovative flight safety film inspired by Delftware
            decoration techniques. More than 1,000 handmade Delft
            Blue tiles were specially drawn, animated, and painted
@@ -630,10 +536,7 @@
       </div>
 
       <div class="blog-section">
-        <div class="blog-section-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M278.5 215.6L23 471c-9.4 9.4-9.4 24.6 0 33.9 9.4 9.4 24.6 9.4 33.9 0l248.1-248.1c41.4 38.2 95.1 61.2 154 61.2 8.8 0 17.5-.6 26-1.8-4.6-14.8-7-30.5-7-46.8 0-88.4 71.6-160 160-160 16.3 0 32 2.4 46.8 7 1.2-8.5 1.8-17.2 1.8-26 0-132.5-107.5-240-240-240-82.5 0-155.4 41.6-198.5 105z"/></svg>
-          Production
-        </div>
+        <div class="blog-section-title">Production</div>
         <p>The script was translated into handmade Delftware
            drawings, painted onto tiles, then filmed using
            stop-motion animation — tile by tile. Produced by
@@ -643,10 +546,7 @@
       </div>
 
       <div class="blog-section">
-        <div class="blog-section-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>
-          Design Context
-        </div>
+        <div class="blog-section-title">Design Context</div>
         <p>Part of broader Dutch design initiative including the
            Economy Class "Tasty Blue" catering concept and KLM's
            tradition of Delftware miniature houses dating to the
@@ -655,50 +555,30 @@
       </div>
 
       <div class="blog-section">
-        <div class="blog-section-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
-          Distribution
-        </div>
+        <div class="blog-section-title">Distribution</div>
         <p>Premiered at Dutch Design Week Eindhoven, October 17–25,
            2015. Screened on all KLM intercontinental flights from
            November 1, 2015.</p>
       </div>
 
       <div class="blog-section">
-        <div class="blog-section-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197z"/></svg>
-          Source
-        </div>
+        <div class="blog-section-title">Source</div>
         <p><a href="https://news.klm.com/klms-new-flight-safety-film-features-delftware-animation/"
               target="_blank" rel="noopener noreferrer">
           KLM News (October 16, 2015)</a>.
           Pedri Animation BV production credits. KLM Facebook
           making-of post.</p>
       </div>
-
-      <div class="blog-section">
-        <div class="blog-section-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M12.41 148.02l232.94 105.67c6.8 3.09 14.49 3.09 21.29 0l232.94-105.67c16.55-7.51 16.55-32.52 0-40.03L266.65 2.31a25.607 25.607 0 0 0-21.29 0L12.41 107.98c-16.55 7.51-16.55 32.53 0 40.04z"/></svg>
-          Methodology
-        </div>
-        <p>Schema design follows the same ENUM-enforced controlled
-           vocabulary approach applied in the
-           <a href="https://github.com/kianoding/data-management-sp-26"
-              target="_blank" rel="noopener noreferrer">
-           FAIR Gaming Data project</a>, where SKOS properties
-           bridge taxonomy and folksonomy within a single
-           relational structure [3].</p>
-      </div>
     </div>
 
-    <!-- CENTER 2.5fr: Video Preview -->
+    <!-- CENTER: Video -->
     <div class="video-area">
       <div class="video-frame">
         <a href="https://news.klm.com/klms-new-flight-safety-film-features-delftware-animation/"
            target="_blank" rel="noopener noreferrer"
            title="Source: KLM News (October 16, 2015)">
           <img src="https://content.presspage.com/uploads/162/1920_img_1255.jpg?10000"
-               alt="KLM Delft Blue Flight Safety Film — stop-motion animation using handmade Delft Blue tiles. Source: KLM News, October 16, 2015">
+               alt="KLM Delft Blue Flight Safety Film — stop-motion animation using handmade Delft Blue tiles">
         </a>
       </div>
       <div class="video-caption">
@@ -712,21 +592,17 @@
       </div>
     </div>
 
-    <!-- RIGHT 1fr: Scrollable Metadata -->
+    <!-- RIGHT: Metadata -->
     <div class="metadata-sidebar">
 
-      <!-- CARRIER -->
       <div class="entity">
-        <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M436 480h-20V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v456H12c-6.627 0-12 5.373-12 12v20h448v-20c0-6.627-5.373-12-12-12z"/></svg>
-          CARRIER
-        </div>
+        <div class="entity-title">▪ CARRIER</div>
         <div class="field">
           <span class="field-name">carrier</span>
           <span class="field-value">KLM Royal Dutch Airlines</span>
         </div>
         <div class="field">
-          <span class="field-name">iata / icao</span>
+          <span class="field-name">iata/icao</span>
           <span class="field-value">KL / KLM</span>
         </div>
         <div class="field">
@@ -739,11 +615,9 @@
         </div>
       </div>
 
-      <!-- WORK -->
       <div class="entity">
         <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M488 64h-8v20c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12V64H96v20c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12V64h-8C10.7 64 0 74.7 0 88v336c0 13.3 10.7 24 24 24h8v-20c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v20h320v-20c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v20h8c13.3 0 24-10.7 24-24V88c0-13.3-10.7-24-24-24z"/></svg>
-          WORK
+          ▪ WORK
           <span class="fiaf-badge">FIAF: Work</span>
         </div>
         <div class="field">
@@ -768,11 +642,9 @@
         </div>
       </div>
 
-      <!-- AGENTS -->
       <div class="entity">
         <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64z"/></svg>
-          AGENTS
+          ▪ AGENTS
           <span class="fiaf-badge">FIAF: Agent</span>
         </div>
         <div class="field">
@@ -793,11 +665,9 @@
         </div>
       </div>
 
-      <!-- VARIANT -->
       <div class="entity">
         <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8z"/></svg>
-          VARIANT
+          ▪ VARIANT
           <span class="fiaf-badge">FIAF: Variant</span>
         </div>
         <div class="field">
@@ -814,11 +684,9 @@
         </div>
       </div>
 
-      <!-- MANIFESTATIONS -->
       <div class="entity">
         <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32z"/></svg>
-          MANIFESTATIONS
+          ▪ MANIFESTATIONS
           <span class="fiaf-badge">FIAF: Manif.</span>
         </div>
         <div class="field">
@@ -845,30 +713,28 @@
         </div>
       </div>
 
-      <!-- TECHNICAL -->
       <div class="entity">
         <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1z"/></svg>
-          TECHNICAL
+          ▪ TECHNICAL
           <span class="fiaf-badge">FIAF: Manif.</span>
         </div>
         <div class="field">
           <span class="field-name">format</span>
           <span class="enum-tag">MP4</span>
-          <span class="enum-tag" style="margin-left:4px">MXF</span>
+          <span class="enum-tag" style="margin-left:3px">MXF</span>
         </div>
         <div class="field">
           <span class="field-name">codec</span>
           <span class="enum-tag">H.264</span>
         </div>
         <div class="field">
-          <span class="field-name">resolution</span>
+          <span class="field-name">res</span>
           <span class="enum-tag">HD 1080p</span>
         </div>
         <div class="field">
           <span class="field-name">audio</span>
           <span class="enum-tag">AAC</span>
-          <span class="enum-tag" style="margin-left:4px">PCM</span>
+          <span class="enum-tag" style="margin-left:3px">PCM</span>
         </div>
         <div class="field">
           <span class="field-name">size</span>
@@ -880,12 +746,8 @@
         </div>
       </div>
 
-      <!-- AIRCRAFT -->
       <div class="entity">
-        <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M480 192H365.71L260.61 8.06A16.014 16.014 0 0 0 246.71 0h-65.5c-10.63 0-18.3 10.17-15.38 20.39L214.86 192H112l-43.2-57.6c-3.02-4.03-7.77-6.4-12.8-6.4H16C5.6 128-2.21 137.75.49 147.88L32 256 .49 364.12C-2.21 374.25 5.6 384 16 384h40c5.03 0 9.78-2.37 12.8-6.4L112 320h102.86l-49.03 171.6c-2.92 10.22 4.75 20.4 15.38 20.4h65.5c5.74 0 11.04-3.08 13.89-8.06L365.71 320H480c35.35 0 96-28.65 96-64s-60.65-64-96-64z"/></svg>
-          AIRCRAFT
-        </div>
+        <div class="entity-title">▪ AIRCRAFT</div>
         <div class="field">
           <span class="field-name">type</span>
           <span class="field-value">B777-300ER</span>
@@ -904,12 +766,8 @@
         </div>
       </div>
 
-      <!-- RIGHTS -->
       <div class="entity">
-        <div class="entity-title">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3z"/></svg>
-          RIGHTS
-        </div>
+        <div class="entity-title">▪ RIGHTS</div>
         <div class="field">
           <span class="field-name">holder</span>
           <span class="field-value">KLM Royal Dutch Airlines</span>
@@ -931,9 +789,7 @@
 <!-- FOOTER -->
 <div class="footer">
   <span>Schema v2.0 | FIAF WVMI Hierarchy |
-    ENUM-enforced data quality rules |
-    Methodology: <a href="https://github.com/kianoding/data-management-sp-26"
-    target="_blank" rel="noopener noreferrer">FAIR Gaming Data project</a></span>
+    ENUM-enforced data quality rules</span>
   <span>
     <a href="https://kelseykiano.framer.website">Portfolio</a> ·
     <a href="https://github.com/kianoding">GitHub</a> ·
@@ -962,10 +818,3 @@ function switchTab(tabName) {
 
 </body>
 </html>
-
-							<script>
-                            	
-							</script>
-                        </body>
-                        </html>
-                    
