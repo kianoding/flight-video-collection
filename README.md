@@ -1,5 +1,9 @@
 # ✈️ Flight Safety Video Taxonomy — Schema v2.0
 
+![Video Digital Collection]([images/screenshot.png](https://github.com/kianoding/flight-video-collection/blob/main/img%20/%20FlightSafety_image%20collection.jpg?raw=true
+))
+
+[Explore here!](https://kianoding.github.io/flight-video-collection/Metadata-sample.html)
 **A FIAF-aligned relational database for cataloging, classifying, and 
 managing airline flight safety video metadata across international 
 carriers, OEM systems, and regulatory standards.**
